@@ -8257,7 +8257,7 @@ var _user$project$Test$update = F2(
 		if (_p0.ctor === 'Increment') {
 			return model + (_elm_lang$core$Basics$pi / 30);
 		} else {
-			return model - 1;
+			return model - (_elm_lang$core$Basics$pi / 30);
 		}
 	});
 var _user$project$Test$model = 0;
@@ -8888,24 +8888,39 @@ var _user$project$Test$view = function (model) {
 					},
 					{
 						ctor: '::',
-						_0: _elm_lang$html$Html$text('rotate'),
+						_0: _elm_lang$html$Html$text('clockwise'),
 						_1: {ctor: '[]'}
 					}),
 				_1: {
 					ctor: '::',
 					_0: A2(
-						_elm_lang$html$Html$div,
-						{ctor: '[]'},
+						_elm_lang$html$Html$button,
 						{
 							ctor: '::',
-							_0: _elm_lang$html$Html$text(
-								A2(
-									_elm_lang$core$Basics_ops['++'],
-									't = ',
-									_elm_lang$core$Basics$toString(model))),
+							_0: _elm_lang$html$Html_Events$onClick(_user$project$Test$Decrement),
+							_1: {ctor: '[]'}
+						},
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html$text('Counterclockwise'),
 							_1: {ctor: '[]'}
 						}),
-					_1: {ctor: '[]'}
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$div,
+							{ctor: '[]'},
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html$text(
+									A2(
+										_elm_lang$core$Basics_ops['++'],
+										't = ',
+										_elm_lang$core$Basics$toString(model))),
+								_1: {ctor: '[]'}
+							}),
+						_1: {ctor: '[]'}
+					}
 				}
 			}
 		});

@@ -25,7 +25,7 @@ update msg model =
       model + pi / 30
 
     Decrement ->
-      model - 1
+      model - pi / 30
 
 -- VIEW
 view : Model -> Html Msg
@@ -261,6 +261,7 @@ view model =
             []
             -- y軸の補助線
         ]
-    , button [ onClick Increment ] [ text "rotate" ]
+    , button [ onClick Increment ] [ text "clockwise" ]
+    , button [ onClick Decrement ] [ text "Counterclockwise" ]
     , div [] [ text ("t = " ++ toString model) ]
     ]
